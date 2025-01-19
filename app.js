@@ -1,11 +1,25 @@
-let numeroSecreto = 12;
-let numeroUsuario = prompt("Me indicas un numero entre 1 y 10 por favor:");
+let numeroSecreto = 6;
+let numeroUsuario=0;
+let contador= 0;
 
-console.log(numeroUsuario);
+while(numeroUsuario != numeroSecreto ){
+    let numeroUsuario = prompt("Me indicas un numero entre 1 y 10 por favor:");
 
-if (numeroUsuario == numeroSecreto) {
-    alert(`Acertaste el numero es: ${numeroUsuario}`);
+    console.log(numeroUsuario);
+
+    if (numeroUsuario == numeroSecreto) {
+        alert(`Acertaste el numero es: ${numeroUsuario}`);
+    }
+    else{
+        if(numeroUsuario>numeroSecreto){
+            alert("El numero debe ser menor");
+        }
+        else{
+            alert("El numero debe ser mayor");
+        }
+    }
+
+    contador=contador+1
+    alert(`Realizaste ${contador} intentos`);
 }
-else{
-    alert('Numero equivocado, intentalo de nuevo');
-}
+
